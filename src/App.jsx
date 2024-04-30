@@ -1,7 +1,8 @@
 function App() {
+  console.log({ meta: import.meta.env.VITE_API_BASE_URL });
   return (
     <>
-      <h1>Hello World!</h1>
+      <h1>{import.meta.env.VITE_API_BASE_URL}</h1>
     </>
   );
 }
