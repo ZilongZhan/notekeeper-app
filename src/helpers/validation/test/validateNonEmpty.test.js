@@ -1,4 +1,5 @@
 import { validateNonEmpty } from "../validateNonEmpty";
+import { describe, test, expect } from "@jest/globals";
 
 describe("Given an object type variable", () => {
   const STATUS = {
