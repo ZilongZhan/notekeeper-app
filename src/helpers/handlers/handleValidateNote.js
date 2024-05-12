@@ -3,8 +3,8 @@ import { STATUS } from "../../data";
 
 export const handleValidateNote = (note) => {
   return (
-    validateEnum(note.status, STATUS),
-    validateNonEmpty(note),
+    validateEnum(note.status, STATUS) &&
+    validateNonEmpty(note) &&
     validateType(note)
   );
 };
