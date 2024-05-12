@@ -5,16 +5,18 @@ const URL_PATH = "notes";
 const URL_TO_FETCH = `${BASE_URL}/${URL_PATH}`;
 
 const getNotes = () => {
-  return fetch(URL_TO_FETCH).then((response) => response.json());
+  return fetch(URL_TO_FETCH)
+    .then((response) => response.json())
+    .then((data) => data.notes);
 };
 
 const deleteNote = (noteID) => {
-  return fetch(`${URL_TO_FETCH}/${noteID}`, { method: DELETE });
+  return fetch(`${URL_TO_FETCH}/${noteID}`, { method: "DELETE" });
 };
 
 const updateNote = (updatingNote) => {
   return fetch(URL_TO_FETCH, {
-    method: PUT,
+    method: "PUT",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(updatingNote),
   });
@@ -22,7 +24,7 @@ const updateNote = (updatingNote) => {
 
 const createNote = (newNote) => {
   return fetch(URL_TO_FETCH, {
-    method: POST,
+    method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(newNote),
   });
