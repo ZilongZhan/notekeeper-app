@@ -1,20 +1,25 @@
-const getData = ({ URL_TO_FETCH }) => {
+const getData = ({ url, resourcePath }) => {
+  const URL_TO_FETCH = `${url}/${resourcePath}`;
+
   return globalThis.fetch(URL_TO_FETCH).then((response) => response.json());
 };
 
-const deleteData = ({ URL_TO_FETCH }) => {
+const deleteData = ({ url, resourcePath }) => {
+  const URL_TO_FETCH = `${url}/${resourcePath}`;
   return globalThis
     .fetch(URL_TO_FETCH, { method: "DELETE" })
     .then((response) => response.json());
 };
 
-const createData = ({ URL_TO_FETCH, config }) => {
+const createData = ({ url, resourcePath, config }) => {
+  const URL_TO_FETCH = `${url}/${resourcePath}`;
   return globalThis
     .fetch(URL_TO_FETCH, config)
     .then((response) => response.json());
 };
 
-const updateData = ({ URL_TO_FETCH, config }) => {
+const updateData = ({ url, resourcePath, config }) => {
+  const URL_TO_FETCH = `${url}/${resourcePath}`;
   return globalThis
     .fetch(URL_TO_FETCH, config)
     .then((response) => response.json());
