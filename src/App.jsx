@@ -1,7 +1,15 @@
+import { NotesList, CreateNoteForm } from "./components";
+import { Header } from "./components";
+import { useNotes } from "./hooks";
+
 function App() {
+  const { notes, handleSetNotes } = useNotes();
+
   return (
     <>
-      <h1>Notekeeper App</h1>
+      <Header heading="Notekeeper App" />
+      <CreateNoteForm notes={notes} handleSetNotes={handleSetNotes} />
+      <NotesList notes={notes} handleSetNotes={handleSetNotes} />
     </>
   );
 }
