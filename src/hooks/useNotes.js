@@ -5,7 +5,7 @@ export const useNotes = () => {
   const [notes, setNotes] = useState([]);
 
   useEffect(() => {
-    noteServices.getNotes().then((notes) => setNotes([...notes]));
+    noteServices.getNotes().then(({ notes }) => setNotes(notes));
   }, []);
 
   const handleSetNotes = (newNotes) => {
