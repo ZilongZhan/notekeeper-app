@@ -1,6 +1,6 @@
-import { handleCreateNote } from "../helpers/handlers/handleCreateNote";
 import { STATUS } from "../data";
-import { Button } from "./shared";
+import { handleCreateNote } from "../helpers/handlers/handleCreateNote";
+import { Button, DropdownList } from "./shared";
 
 export const CreateNoteForm = ({ notes, handleSetNotes }) => {
   const handleSubmit = (event) => {
@@ -25,13 +25,7 @@ export const CreateNoteForm = ({ notes, handleSetNotes }) => {
       <input id="description" type="text" name="description" />
       <label htmlFor="important">Important</label>
       <input id="important" type="checkbox" name="important" />
-      <select name="status" id="status">
-        {Object.values(STATUS).map((option, index) => (
-          <option key={index} value={option}>
-            {option}
-          </option>
-        ))}
-      </select>
+      <DropdownList OPTIONS={STATUS} />
       <label htmlFor="dueDate">Due date</label>
       <input id="dueDate" type="date" name="dueDate" />
       <Button type="submit" label="create" />
