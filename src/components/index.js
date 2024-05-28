@@ -1,4 +1,4 @@
-export { NotesList } from "./NotesList";
-export { CreateNoteForm } from "./CreateNoteForm";
-export { UpdateNoteForm } from "./UpdateNoteForm";
-export { Header } from "./Header";
+export { Header } from "./header";
+export { CreateNoteForm } from "./createNoteForm";
+export { NotesList } from "./notesList";
+export { Footer } from "./footer";

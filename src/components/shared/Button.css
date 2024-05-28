@@ -1,0 +1,38 @@
+.submit-button {
+  border-radius: 5px;
+  padding: 0.5rem;
+  align-self: center;
+  font-weight: bold;
+  font-size: 25px;
+  margin-top: 1rem;
+  background: rgb(126, 229, 255);
+}
+
+.edit-button,
+.cancel-button,
+.save-button {
+  padding: 0.5rem;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.save-button {
+  background: rgb(126, 229, 255);
+}
+
+.cancel-button {
+  background: rgb(255, 128, 128);
+  color: white;
+}
+
+.edit-button {
+  background: rgb(126, 229, 255);
+  border-radius: 25px;
+}
+
+.delete-button {
+  background: transparent;
+  font-size: 25px;
+  justify-self: end;
+}
