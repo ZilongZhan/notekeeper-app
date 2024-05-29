@@ -4,7 +4,6 @@ import { Button, DropdownList } from "../shared";
 import { useImportance } from "../../hooks/useImportance";
 
 import "./UpdateNoteForm.css";
-import { useState } from "react";
 
 export const UpdateNoteForm = ({
   updatingNote,
