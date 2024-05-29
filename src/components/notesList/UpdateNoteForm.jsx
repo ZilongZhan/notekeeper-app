@@ -1,8 +1,10 @@
 import { STATUS } from "../../data";
 import { handleUpdateNote } from "../../helpers";
 import { Button, DropdownList } from "../shared";
+import { useImportance } from "../../hooks/useImportance";
 
 import "./UpdateNoteForm.css";
+import { useState } from "react";
 
 export const UpdateNoteForm = ({
   updatingNote,
@@ -10,6 +12,10 @@ export const UpdateNoteForm = ({
   handleSetNotes,
   handleSetUpdate,
 }) => {
+  const { importance, handleSetImportance } = useImportance(
+    updatingNote.important,
+  );
+
   const handleSubmit = (event) => {
     event.preventDefault();
 
@@ -53,6 +59,8 @@ export const UpdateNoteForm = ({
           id="important"
           type="checkbox"
           name="important"
+          checked={importance}
+          onChange={handleSetImportance}
         />
         <label className="input-label" htmlFor="important">
           Important
