@@ -1,0 +1,7 @@
+.dropdown-list {
+  border-radius: 5px;
+  background: rgb(171, 255, 255);
+  padding: 0.5rem;
+  font-size: 25px;
+  box-shadow: 2px 2px 5px rgb(204, 204, 204);
+}
