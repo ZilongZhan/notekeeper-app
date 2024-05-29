@@ -27,11 +27,7 @@ export const NoteItem = ({ note, notes, handleSetNotes }) => {
           handleSetUpdate={handleSetUpdate}
         />
       ) : (
-        <NoteBody
-          note={note}
-          handleSetNotes={handleSetNotes}
-          handleSetUpdate={handleSetUpdate}
-        />
+        <NoteBody note={note} handleSetUpdate={handleSetUpdate} />
       )}
     </li>
   );

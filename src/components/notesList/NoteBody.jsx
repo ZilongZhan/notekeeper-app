@@ -2,9 +2,7 @@ import { Button } from "../shared";
 
 import "./NoteBody.css";
 
-export const NoteBody = ({ note, handleSetNotes, handleSetUpdate }) => {
-  const importance = note.important ? "important" : "";
-
+export const NoteBody = ({ note, handleSetUpdate }) => {
   return (
     <article className="note-body">
       <section className="note-details">
