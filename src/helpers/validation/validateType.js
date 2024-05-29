@@ -6,7 +6,7 @@ export const validateType = (note) => {
     isValidType(note.description, "string") &&
     isValidType(note.important, "boolean") &&
     isValidType(note.status, "string") &&
-    isValidType(note.due_date, "string");
+    isValidType(note.dueDate, "string");
 
   return result;
 };

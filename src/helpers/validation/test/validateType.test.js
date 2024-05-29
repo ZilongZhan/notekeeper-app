@@ -1,5 +1,5 @@
 import { validateType } from "../validateType";
-import { describe, test, expect } from "@jest/globals";
+import { describe, test, expect } from "vitest";
 
 describe("Given note object", () => {
   const STATUS = {
@@ -15,8 +15,7 @@ describe("Given note object", () => {
       description: "Go to the park",
       important: false,
       status: STATUS.PENDING,
-      due_date: new Intl.DateTimeFormat("en-EN").format(new Date(Date.now())),
-      created_at: Date.now(),
+      dueDate: new Intl.DateTimeFormat("en-EN").format(new Date(Date.now())),
     };
 
     // Act
@@ -33,8 +32,7 @@ describe("Given note object", () => {
       description: "Go to the park",
       important: false,
       status: STATUS.PENDING,
-      due_date: new Intl.DateTimeFormat("en-EN").format(new Date(Date.now())),
-      created_at: Date.now(),
+      dueDate: new Intl.DateTimeFormat("en-EN").format(new Date(Date.now())),
     };
 
     //Act
