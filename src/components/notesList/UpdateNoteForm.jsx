@@ -40,7 +40,8 @@ export const UpdateNoteForm = ({
         type="text"
         defaultValue={updatingNote.name}
       />
-      <input
+      <textarea
+        rows="3"
         className="form-input"
         id="description"
         type="text"

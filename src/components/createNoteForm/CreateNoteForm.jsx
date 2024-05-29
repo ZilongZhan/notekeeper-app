@@ -28,7 +28,8 @@ export const CreateNoteForm = ({ notes, handleSetNotes }) => {
       <label className="input-label" htmlFor="description">
         Description
       </label>
-      <input
+      <textarea
+        rows="3"
         className="form-input"
         id="description"
         type="text"

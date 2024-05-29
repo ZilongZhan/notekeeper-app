@@ -23,6 +23,8 @@
   padding: 0 0.5rem;
   font-size: 25px;
   background: rgb(244, 244, 244);
+  height: 100%;
+  resize: none;
 }
 
 .form-fieldset {

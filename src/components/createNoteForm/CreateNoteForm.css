@@ -19,6 +19,8 @@
   margin-bottom: 0.5rem;
   padding: 0 0.5rem;
   font-size: 25px;
+  height: 100%;
+  resize: none;
 }
 
 .form-fieldset {
