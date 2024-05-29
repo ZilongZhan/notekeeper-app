@@ -17,6 +17,8 @@ export const CreateNoteForm = ({ notes, handleSetNotes }) => {
     };
 
     handleCreateNote(newNote, notes, handleSetNotes);
+
+    event.target.reset();
   };
 
   return (
